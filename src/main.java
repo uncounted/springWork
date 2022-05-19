@@ -20,7 +20,8 @@ public class main {
         taxi2.startDrive();
         taxi2.changeGuest(true, 5, 10);
         taxi2.changeGuest(true, 3, 40);
-        taxi2.changeGuest(false, 3);
+        taxi2.changeGuest(false, 1);
+        taxi2.changeGuest(false, 2);
 
     }
 }

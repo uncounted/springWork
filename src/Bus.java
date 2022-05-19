@@ -22,7 +22,7 @@ public class Bus extends Car
     Bus() {
         super();
         busNum = number;
-        status = true;
+        status = 1;
     }
 
     // 운행 시작
@@ -31,16 +31,16 @@ public class Bus extends Car
     public void startDrive() {
         checkOil();
         if(oil >= OIL_REQUIRED){
-            changeStatus(true);
+            changeStatus(1);
             changeSpeed(50);
         }
     }
 
     // 상태 변경
-    // true면 false로+속도를 0으로, false면 true로.
+    // 1면 0로+속도를 0으로, 0면 1로.
     @Override
-    public void changeStatus(boolean status){
-        if(status == true){
+    public void changeStatus(int status){
+        if(status == 1){
             System.out.printf("%d번 버스: 상태가 '운행'으로 변경됩니다.%n", busNum);
         } else {
             System.out.printf("%d번 버스: 상태가 '차고지행'으로 변경됩니다.%n", busNum);
@@ -52,7 +52,7 @@ public class Bus extends Car
     // 현재 상태를 반환
     @Override
     public boolean checkStatus() {
-        if (status == false) {
+        if (status == 0) {
             System.out.printf("%d번 버스: 현재 차고지에 있습니다.", busNum);
             return false;
         } else {
@@ -74,7 +74,7 @@ public class Bus extends Car
         if (oil < OIL_REQUIRED){
             System.out.printf("%d번 버스: 주유량이 10 미만으로, 손님을 하차시키고 차고지로 돌아갑니다.%n", busNum);
             this.guest = 0;
-            changeStatus(false);
+            changeStatus(0);
         } else {
             System.out.printf("- %d번 버스: 현재 주유량은 %d L 있습니다.%n", busNum, oil);
         }

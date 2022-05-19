@@ -1,4 +1,4 @@
 public interface StatusChangeable {
 
-    void changeStatus(boolean status);
+    void changeStatus(int status);
 }

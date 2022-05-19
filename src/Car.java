@@ -6,12 +6,12 @@ public class Car {
     int speed;
     int fee;
     int income;
-    boolean status; //버스: true(운행중), false(차고지) / 택시: true(운행중), false(일반)
+    int status; //버스: 1(운행중), 0(차고지) / 택시: 1(운행중), 2(일반), 0(운행불가)
     int guest; //버스: 승객 수 / 택시: 1이상이면 승객 탑승
 
     {
         speed = 0;
-        status = false;
+        status = 0;
         guest = 0;
         income = 0;
         oil = 100;
