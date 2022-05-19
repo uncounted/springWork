@@ -122,7 +122,8 @@ public class Bus extends Car
 
     @Override
     public void changeGuest(boolean addDel, int guest, int distacnceToDestination) {
-        //빈 코드가 생겨버렸다. 인터페이스로 구현하지 말아야 하나?
+        // 빈 코드가 생겨버렸다. 인터페이스로 구현하지 말아야 하나? 팀원들의 조언) 이런 경우 인터페이스로 구현하지 않는 게 좋다고 한다.
+        // 그런데 이 경우에는 목적지를 다른 메소드로 먼저 구현해도 됐다!
     }
 
     // 손님 수에 따른 수입 계산
