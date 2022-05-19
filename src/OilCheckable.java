@@ -1,0 +1,3 @@
+interface OilCheckable {
+    void checkOil();
+}
